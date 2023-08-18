@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <style>
+        /* Global styles come from external css https://codepen.io/GreenSock/pen/gOWxmWG */
+
+body {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+
+}
+.box1 {
+	width: 75px;
+	height: 75px;
+  border-radius: 12px;
+	background-color: green;
+}
+.box2 {
+	width: 75px;
+	height: 75px;
+  border-radius: 12px;
+	background-color: red;
+}
+.box3 {
+	width: 75px;
+	height: 75px;
+  border-radius: 12px;
+	background-color: blueviolet;
+}
+
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+
+    <script>
+    gsap.to(".box1", { x: 500, rotation:360, duration: 2});
+    gsap.from(".box2", { x: 500});
+    gsap.fromTo(".box3", { x: 800},{ y: 200});
+    </script>
+</body>
+</html>
